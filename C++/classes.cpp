@@ -53,7 +53,6 @@ class Car {
         }
 
         int objNum;         // to assign nth for an object.
-
 };  //terminated by ;
 
 
