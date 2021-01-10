@@ -2,13 +2,13 @@
 using namespace std;
 
 void selectionSort(int arr[], int n) {
-    int minIndex;
-    for (int i = 0; i < n-1; i++) {
-        minIndex = i;
-        for (int j = i+1; j < n; j++) {
+    for (int i = 0; i < n-1; i++) {             // loop to take care of all the positions
+        int minIndex = i;                       // to keep the index of the smallest(or largest) element
+        for (int j = i+1; j < n; j++) {         // loop starts after the sorted array to find the smallest(or largest) element index
             if (arr[j] < arr[minIndex])
                 minIndex = j;
         }
+        // swapping the element present at the found index with its correct position inside the sorted array
         swap(arr[i], arr[minIndex]);            // swapping happens only (n-1) times [FIXED]
     }
 }
@@ -25,6 +25,8 @@ int main() {
 }
 
 // Selection sort is an "UNSTABLE algorithm" - the order of occurence of equal values may change.
+// Algorithm: Transverse through the whole array and finds the smallest(or largest) element and swaps it with its correct position.
+// Works as: [SORTED, UNSORTED]
 // Does limited memory writes i.e. only (n-1) writes.
 // Time Complexity: Theta(n^2) --FIXED
 // Simple Algorithm
