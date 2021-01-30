@@ -5,7 +5,7 @@ using namespace std;
 // this an ABSTRACT CLASS as it contains a virtual function.
 class Animal {
     public:
-        virtual void eat() = 0;   //syntax of definnig a PURE VIRTUAL Function
+        virtual void eat() = 0;   //syntax of definning a PURE VIRTUAL Function
 
         void run() {    // just a dummy function to show that this class is still ABSTRACT.
             cout << "Run" << endl ;
@@ -30,7 +30,7 @@ class Cat: public Animal {
 
 // Abstract Class
 class Cow: public Animal {
-    // virtual function is not re-redifined so this will contain the same Virtual function.
+    // virtual function is not re-redefined so this will contain the same Virtual function.
     // Therefore object of this class can't be created.
 };
 
@@ -54,7 +54,7 @@ int main() {
 
 // Pure Virtual Functions must have same signature (void eat()) while re-defining them.
 
-// Pointer of base class can be used to point derived classes objects and can acess the re-definiton
+// Pointer of base class can be used to point derived classes objects and can access the re-definiton
 // of virtual function present in that derived class.
 // We can't do this without making the function virtual in the Base class.
 // This can't be done by function overriding too.
@@ -65,7 +65,7 @@ int main() {
 // We can verify this by putting some function body in the Base class virtual function and removing the 
 // virtual keyword.
 
-// Function OVERIDING: virtual function in base class and then re-definition of it in its derived class.
+// Function OVERRIDING: virtual function in base class and then re-definition of it in its derived class.
 // The re-definition must have same function signature (func signature => void eat()) unlike func overloading.
-// Function OVERIDING is RUNTIME POLYMORPHISM.
+// Function OVERRIDING is RUNTIME POLYMORPHISM.
 // Whereas function OVERLOADING is COMPILE TIME POLYMORPHISM. 
