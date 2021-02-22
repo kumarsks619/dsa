@@ -35,7 +35,7 @@ int main() {
 }
 
 // the derived class will always overide the base class function with the same name.
-// function is different from function overloading as overiding happens irrespective of 
+// function is different from function overloading as overriding happens irrespective of 
 // type of arg, no. of arg or sequence of arg.
 // however the function of base class can be accessed indirectly using the scope resolution operator(::)
 // inside the derived class function.
