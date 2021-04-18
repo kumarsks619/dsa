@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Person {
+struct Person
+{
     string name;
     int age;
     double salary;
@@ -12,15 +13,16 @@ struct Person {
     //     salary = 0;
     // }
 
-    void displayPerson() {
+    void displayPerson()
+    {
         cout << "Name: " << name << " Age: " << age << " Salary: " << salary << endl;
     }
-};  //terminated by ;
+}; //terminated by ;
 
-
-int main() {
+int main()
+{
     cout << "Enter Person one details: " << endl;
-    Person p1;      // same as: struct Person p1;   // struct keyword while creating struct var is optional.
+    Person p1; // same as: struct Person p1;   // struct keyword while creating struct var is optional.
     cout << "Name: ";
     cin >> p1.name;
     cout << "Age: ";
@@ -36,11 +38,10 @@ int main() {
     cout << "Salary: " << p1.salary << endl;
 
     // initialization of a structure object
-    Person p2 = {"Batook", 21, 50000};  // order must be same as that in structure definition.
+    Person p2 = {"VeNoM", 21, 50000}; // order must be same as that in structure definition.
     p2.displayPerson();
 
     // Person p3 = {.name = "Bubble", .age = 22, .salary = 50000};      this way work in C but not in C++
-
 }
 
 // Structures are same as Classes but in struct data members are public by default.
@@ -48,4 +49,4 @@ int main() {
 
 // Structures also show inheritance.
 // Like classes, there is also constructor and destructor functions in structures.
-// If the type of inheritence is not specified than it will be public by default in case of structures.
+// If the type of inheritance is not specified than it will be public by default in case of structures.
