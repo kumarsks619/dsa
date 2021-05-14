@@ -1,0 +1,6 @@
+1)  In BST, ALL the KEYS to LEFT of a Node must be STRICTLY LESS than the it's own key and ALL the KEYS
+    to the RIGHT of it must be STRICTLY GREATER than it's own key. [IMPORTANT - This must be true for 
+    ALL THE KEYS]
+2)  In BST, there must be NO DUPLICATION of any key.
+3)  In-Order traversal of a BST is always SORTED.
+4)  Successor of a key is its closest key value.
