@@ -1,0 +1,34 @@
+1)  Binary Heap is used in HeapSort.
+2)  Binary Heap is used to implement Priority Queue.
+3)  Two Types of Binary Heap:
+    a) Min-Heap: lowest value is assigned to highest priority.
+    b) Max-Heap: highest value is assigned to highest priority.  
+    In both the types, the highest priority item is always at the top of the heap.
+
+4)  Binary Heap must be a Complete Binary Tree.
+    A Complete Binary Tree is a binary tree in which all items all filled from top to bottom and then
+    from left to right without any child position being left out in between (no gap should be present).
+                X                                           X
+            X       X                                   X       X
+         X    X   X                                  X    _   X    
+      Complete Binary Tree                        Incomplete Binary Tree
+
+NOTE: Binary Tree is different from BST (it has some more rules). Here we are talking about Binary Tree only.
+
+5)  A Complete Binary Tree can be represented in ARRAY. In fact a Binary Heap is implemented as an array internally.
+    (The tree structure is just a pictorial/logical representation of the array). It has all the advantages of an 
+    array like cache friendliness, random access, etc.
+                             0
+                        1        2
+                    3     4   5     6
+
+    Array Representation:   [0, 1, 2, 3, 4, 5, 6]
+    Useful Formulae (here, i = array index):
+        left(i) = 2i + 1
+        right(i) = 2i + 2
+        parent(i) = floor[(i - 1) / 2]
+
+6)  A Complete binary Tree has the minimum possible HEIGHT for the given number of Nodes.
+7)  In a Min-Heap, ALL THE DESCENDANTS of a Node's key must be strictly less than it's own key value, i.e why
+    the minimum value always remains at the top in the tree.
+     
