@@ -4,9 +4,10 @@ using namespace std;
 
 int bae = 1;
 
-int main() {
+int main()
+{
     int bae = 5;
-    cout << ::bae;   
+    cout << ::bae;
 }
 
 // :: - unary scope resolution operator

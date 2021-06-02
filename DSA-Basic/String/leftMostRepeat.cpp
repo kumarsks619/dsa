@@ -1,12 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int leftMostRepeat(string str) {
+int leftMostRepeat(string str)
+{
     int result = -1;
-    int count[256] = { 0 };         // array to keep the count of each character in the string
+    int count[256] = {0}; // array to keep the count of each character in the string
 
     // transversing the string from right so that the end result value will contain the index of leftmost repeating character.
-    for (int i = str.length()-1; i >= 0; i--)       
+    for (int i = str.length() - 1; i >= 0; i--)
         if (count[str[i]] == 0)
             count[str[i]]++;
         else
@@ -15,7 +16,8 @@ int leftMostRepeat(string str) {
     return result;
 }
 
-int main() {
+int main()
+{
     string str;
     cout << "Enter a string: ";
     getline(cin, str);

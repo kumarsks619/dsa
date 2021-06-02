@@ -3,26 +3,33 @@ using namespace std;
 
 // this SmartPtr class can handle pointers of any data type.
 template <typename T>
-class SmartPtr {
+class SmartPtr
+{
     T *ptr;
-    public:
-        SmartPtr(T *p = NULL) {
-            ptr = p;
-        }
-        T & operator*() {
-            return *ptr;
-        }
-        T * operator->() {
-            return ptr;
-        }
-        ~SmartPtr() {
-            delete ptr;
-        }
-};  // terminated by semi-colon.
 
-int main() {
+public:
+    SmartPtr(T *p = NULL)
+    {
+        ptr = p;
+    }
+    T &operator*()
+    {
+        return *ptr;
+    }
+    T *operator->()
+    {
+        return ptr;
+    }
+    ~SmartPtr()
+    {
+        delete ptr;
+    }
+}; // terminated by semi-colon.
+
+int main()
+{
     cout << "SmartPtr for int: " << endl;
-    SmartPtr<int> sp1(new int(5));  // creating an SmartPtr obj by passing a ptr of dynamically allocated memory.
+    SmartPtr<int> sp1(new int(5)); // creating an SmartPtr obj by passing a ptr of dynamically allocated memory.
     cout << *sp1 << endl;
     *sp1 = 10;
     cout << *sp1 << endl;

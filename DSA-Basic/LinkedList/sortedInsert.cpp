@@ -1,27 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Node {
+struct Node
+{
     int data;
     Node *next;
-    Node(int x) {
+    Node(int x)
+    {
         data = x;
         next = NULL;
     }
-}; 
+};
 
 // function to insert new Node in sorted linked list at its correct position and return the head (or new head)
-Node * insertSorted(Node *head, int data) {
+Node *insertSorted(Node *head, int data)
+{
     Node *temp = new Node(data);
     // if the linked list is empty i.e. head=NULL
-    if (head == NULL) {
-        return temp;       // return the new head (changed)
+    if (head == NULL)
+    {
+        return temp; // return the new head (changed)
     }
 
     // if the correct position of the data to be inserted is at the head Node i.e. head->data > data
-    if (head->data > data) {
+    if (head->data > data)
+    {
         temp->next = head;
-        return temp;        // return the new head (changed)
+        return temp; // return the new head (changed)
     }
 
     // else
@@ -31,10 +36,11 @@ Node * insertSorted(Node *head, int data) {
     // inserting the new Node at the found correct position
     temp->next = curr->next;
     curr->next = temp;
-    return head;                // return the old head (not changed)
+    return head; // return the old head (not changed)
 }
 
-int main() {
+int main()
+{
     Node *head = new Node(10);
     head->next = new Node(20);
     head->next->next = new Node(30);

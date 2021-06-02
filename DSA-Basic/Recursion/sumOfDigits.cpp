@@ -2,14 +2,15 @@
 using namespace std;
 
 // recursive function to find sum of digits of a number
-int sumOfDigits(int num) {
+int sumOfDigits(int num)
+{
     if (num < 10)
         return num;
-    return sumOfDigits(int(num / 10)) + (num % 10);     // NOT a tail recursive call
- 
+    return sumOfDigits(int(num / 10)) + (num % 10); // NOT a tail recursive call
 }
 
-int main() {
+int main()
+{
     cout << "Enter a number: ";
     int n;
     cin >> n;

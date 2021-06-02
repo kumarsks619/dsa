@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int maxCuts(int l, int a, int b, int c) {
+int maxCuts(int l, int a, int b, int c)
+{
     if (l == 0)
         return 0;
     if (l < 0)
@@ -12,7 +13,8 @@ int maxCuts(int l, int a, int b, int c) {
     return (result + 1);
 }
 
-int main() {
+int main()
+{
     cout << "Enter length of rope (integer): ";
     int len, x, y, z;
     cin >> len;

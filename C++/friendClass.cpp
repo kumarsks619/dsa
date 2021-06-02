@@ -2,32 +2,38 @@
 
 using namespace std;
 
-class Value {
-    private:
-        int val;
-    public:
-        Value(int v) {
-            val = v;
-        }
+class Value
+{
+private:
+    int val;
 
-    friend class ValueFriend;   // declaring other class as friend of this class.
+public:
+    Value(int v)
+    {
+        val = v;
+    }
+
+    friend class ValueFriend; // declaring other class as friend of this class.
 };
 
-class ValueFriend {
-    public:
-        int getVal(Value obj) {
-            return  obj.val;   // friend of Value therefore has full access to all its data members.
-        }
+class ValueFriend
+{
+public:
+    int getVal(Value obj)
+    {
+        return obj.val; // friend of Value therefore has full access to all its data members.
+    }
 };
 
-int main() {
+int main()
+{
     Value v1(5);
     ValueFriend vf1;
 
     cout << "val = " << vf1.getVal(v1);
 }
 
-// A friend class has full access to ALL the data members of the class to which it is friend. 
+// A friend class has full access to ALL the data members of the class to which it is friend.
 
 // Friendship:
 // 1) is Granted, NOT taken.

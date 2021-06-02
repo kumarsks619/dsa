@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    for(cout << "init"; cout << "condition"; cout << "incerement/decrement") {
+int main()
+{
+    for (cout << "init"; cout << "condition"; cout << "increment/decrement")
+    {
         cout << "Hello";
         break;
     }

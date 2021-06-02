@@ -1,26 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Inner {
+class Inner
+{
     int x;
-    public:
-        Inner() {
-            cout << "Inner: Default Constructor called..." << endl;
-        }
-        Inner(int a) {
-            cout << "Inner: Parameterized Constructor called..." << endl;
-            x = a;
-        }
+
+public:
+    Inner()
+    {
+        cout << "Inner: Default Constructor called..." << endl;
+    }
+    Inner(int a)
+    {
+        cout << "Inner: Parameterized Constructor called..." << endl;
+        x = a;
+    }
 };
 
-class Outer {
+class Outer
+{
     Inner in;
-    public:
-        // Outer() { in = Inner(10); }      // constructor without initializer list.
-        Outer() : in(10) {}                 // constructor with initializer list.
-};   
 
-int main() {
+public:
+    // Outer() { in = Inner(10); }      // constructor without initializer list.
+    Outer() : in(10) {} // constructor with initializer list.
+};
+
+int main()
+{
     Outer out1;
 
     return 0;

@@ -1,23 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Node {
+struct Node
+{
     int data;
     Node *next;
-    Node (int x) {
+    Node(int x)
+    {
         data = x;
         next = NULL;
     }
 };
 
-
-int searchLL(Node *head, int k) {
+int searchLL(Node *head, int k)
+{
     int pos = 1;
     Node *curr = head;
-    while (curr != NULL) {
+    while (curr != NULL)
+    {
         if (curr->data == k)
             return pos;
-        else {
+        else
+        {
             pos++;
             curr = curr->next;
         }
@@ -25,13 +29,14 @@ int searchLL(Node *head, int k) {
     return -1;
 }
 
-
-int searchLLRecursive(Node *head, int k) {
+int searchLLRecursive(Node *head, int k)
+{
     if (head == NULL)
         return -1;
     else if (head->data == k)
         return 1;
-    else {
+    else
+    {
         int result = searchLLRecursive(head->next, k);
         if (result == -1)
             return -1;
@@ -40,8 +45,8 @@ int searchLLRecursive(Node *head, int k) {
     }
 }
 
-
-int main() {
+int main()
+{
     Node *head = new Node(5);
     head->next = new Node(10);
     head->next->next = new Node(15);
@@ -55,7 +60,6 @@ int main() {
 
     return 0;
 }
-
 
 // Time Complexity for both: O(n)
 // Auxiliary space required by Recursive method: O(n) to store function call-stack

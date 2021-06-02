@@ -3,23 +3,27 @@
 
 using namespace std;
 
-class Boy {
-    private:
-        string name;
-        int age;
-    public:
-        void setBoy(string n, int a) {
-            name = n;
-            age = a;
-        }
+class Boy
+{
+private:
+    string name;
+    int age;
 
-        void getBoy() {
-            cout << "Name: " << name << " || Age: " << age << endl;
-        }
+public:
+    void setBoy(string n, int a)
+    {
+        name = n;
+        age = a;
+    }
 
+    void getBoy()
+    {
+        cout << "Name: " << name << " || Age: " << age << endl;
+    }
 };
 
-int main() {
+int main()
+{
     Boy *ptr, b1, b2;
 
     ptr = &b1;
@@ -29,7 +33,6 @@ int main() {
     ptr = &b2;
     ptr->setBoy("VeNoM", 21);
     ptr->getBoy();
-    
 }
 
 // same pointer can be used to point different objects and access their properties.

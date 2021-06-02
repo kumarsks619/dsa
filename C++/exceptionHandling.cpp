@@ -2,22 +2,25 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     cout << "Enter numerator and denominator: " << endl;
     int numerator, denominator;
     cin >> numerator >> denominator;
 
-    try {
-        if (denominator == 0) {
-            throw denominator;  // when throw oocurs, programme control is passed to catch block
+    try
+    {
+        if (denominator == 0)
+        {
+            throw denominator; // when throw occurs, programme control is passed to catch block
         }
         int result = numerator / denominator;
         cout << "Division result: " << result;
-
-    }catch(int exception) {     //whatever being thrown is catched here with the data-type
+    }
+    catch (int exception)
+    { //whatever being thrown is caught here with the data-type
         cout << "Error: Divide by " << exception << " error.";
     }
-
 }
 
 // try-catch-throw all works together.

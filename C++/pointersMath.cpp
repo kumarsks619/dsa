@@ -2,9 +2,10 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     int arr[5];
-    int *ap0 = &arr[0];     // same as int* ap0 = &arr[0]
+    int *ap0 = &arr[0]; // same as int* ap0 = &arr[0]
     int *ap1 = &arr[1];
     int *ap2 = &arr[2];
 
@@ -12,7 +13,7 @@ int main() {
     cout << "ap1 holds: " << ap1 << endl;
     cout << "ap2 holds: " << ap2 << endl;
 
-    ap0 = ap0 + 2;  //ap0 now points to next to next address of the type of data it is pointing to.
+    ap0 = ap0 + 2; //ap0 now points to next to next address of the type of data it is pointing to.
 
     cout << "ap0 holds now: " << ap0 << endl;
 }

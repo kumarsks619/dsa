@@ -3,18 +3,19 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     char c;
-    cout <<"char " << sizeof(c) << endl;
+    cout << "char " << sizeof(c) << endl;
 
     int a;
-    cout <<"int " << sizeof(a) << endl;
+    cout << "int " << sizeof(a) << endl;
 
     float b;
-    cout <<"float " << sizeof(a) << endl;
+    cout << "float " << sizeof(a) << endl;
 
     float d;
-    cout <<"double " << sizeof(a) << endl;
+    cout << "double " << sizeof(a) << endl;
 
     string e;
     cout << "string " << sizeof(string) << endl;
@@ -22,6 +23,4 @@ int main() {
     //finding length of an array using sizeof()
     int arr[10];
     cout << "array length:" << sizeof(arr) / sizeof(arr[0]) << endl;
-
 }
- 

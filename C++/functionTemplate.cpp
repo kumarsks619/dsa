@@ -3,19 +3,23 @@
 using namespace std;
 
 // Overloaded Functions *******************************
-int add(int x, int y) {     // function 1
+int add(int x, int y)
+{ // function 1
     return x + y;
 }
 
-float add(int x, float y){  // function 2
+float add(int x, float y)
+{ // function 2
     return x + y;
 }
 
-float add(float x, int y) { // function 3
+float add(float x, int y)
+{ // function 3
     return x + y;
 }
 
-float add(float x, float y) {   // function 4
+float add(float x, float y)
+{ // function 4
     return x + y;
 }
 // *****************************************************
@@ -23,17 +27,19 @@ float add(float x, float y) {   // function 4
 // Function TEMPLATE
 // keywords: template & typename
 template <typename T, typename U, typename V>
-T add(U x, V y) {
+T add(U x, V y)
+{
     return x + y;
 }
 
-
-int main() {
+int main()
+{
     cout << "By Function Overloading ****************************" << endl;
     cout << "Calling Function 1: " << add(3, 4) << endl;
     cout << "Calling Function 2: " << add(3, 4.5f) << endl;
     cout << "Calling Function 3: " << add(3.5f, 4) << endl;
-    cout << "Calling Function 4: " << add(3.5f, 4.5f) << endl << endl;
+    cout << "Calling Function 4: " << add(3.5f, 4.5f) << endl
+         << endl;
 
     cout << "By Function Templates *******************************" << endl;
     cout << "Performing operation of Function 1: " << add<int, int, int>(3, 4) << endl;

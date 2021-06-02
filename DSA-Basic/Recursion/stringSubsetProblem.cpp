@@ -1,22 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void stringSubset(string str, string curr = "", int index = 0) {
-    if (index == str.length()) {
+void stringSubset(string str, string curr = "", int index = 0)
+{
+    if (index == str.length())
+    {
         cout << curr << ", ";
         return;
     }
     stringSubset(str, curr, index + 1);
-    stringSubset(str, curr + str[index], index + 1);    // '+' can be used to concatenate strings in C++ too.
+    stringSubset(str, curr + str[index], index + 1); // '+' can be used to concatenate strings in C++ too.
 }
 
-int main() {
+int main()
+{
     cout << "Enter a string: ";
     string str;
     getline(cin, str);
     cout << "Subsets of " << str << " are: ";
     stringSubset(str);
-    
+
     return 0;
 }
 

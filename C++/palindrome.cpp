@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     cout << "Enter a number: ";
     int num;
     cin >> num;
@@ -10,9 +11,10 @@ int main() {
     int actualNum = num;
     int revNum = 0;
 
-    while(num != 0) {
-        revNum  = (revNum * 10) + (num % 10);
-        num /= 10;    
+    while (num != 0)
+    {
+        revNum = (revNum * 10) + (num % 10);
+        num /= 10;
     }
 
     actualNum == revNum ? cout << "Palindrome" : cout << "NOT Palindrome";

@@ -2,23 +2,27 @@
 
 using namespace std;
 
-class Student {
-    private:
-        int marks;
-        static int count;   // a static data member.
-    public:
-        Student() {
-            count++;
-        }
-        static int getCount() {     // a static member function.
-            return count;           // can only access static data member.
-        }
+class Student
+{
+private:
+    int marks;
+    static int count; // a static data member.
+public:
+    Student()
+    {
+        count++;
+    }
+    static int getCount()
+    {                 // a static member function.
+        return count; // can only access static data member.
+    }
 };
 
 // initialization of a static data member must be done outside the class.
 int Student::count = 0;
 
-int main() {
+int main()
+{
     Student s1, s2, s3;
 
     cout << "No. of Student Objects created: " << Student::getCount(); //static func is called without obj.

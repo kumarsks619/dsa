@@ -1,28 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int avgArray(int arr[], int size) {
-    if(size == 0) {
+int avgArray(int arr[], int size)
+{
+    if (size == 0)
+    {
         throw string("Size of passed array can't be zero !!!");
-    }else {
+    }
+    else
+    {
         return accumulate(arr, arr + size, 0) / size;
     }
 }
 
-
-int main() {
+int main()
+{
     int valsArr[] = {10, 20, 50, 70, 30};
-    try {
+    try
+    {
         int avg = avgArray(valsArr, 5);
-        cout << "Average of array = "<< avg << endl;
-    }catch(string err) {
+        cout << "Average of array = " << avg << endl;
+    }
+    catch (string err)
+    {
         cout << err << endl;
         cout << "Doing clean up operations..." << endl;
-    }catch(...) {
+    }
+    catch (...)
+    {
         cout << "Default catch." << endl;
     }
 
-    cout << "Programe executed successfully !";
+    cout << "Programme executed successfully !";
 
     return 0;
 }

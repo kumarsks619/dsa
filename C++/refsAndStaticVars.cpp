@@ -1,15 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int & fun() {       // this function return a ref to a variable.
-    static int x = 10;  // only refs of static variables should be returned if they are local.
-    return x; 
+int &fun()
+{                      // this function return a ref to a variable.
+    static int x = 10; // only refs of static variables should be returned if they are local.
+    return x;
 }
 
-int main() {
+int main()
+{
     int &z = fun();
     cout << fun() << endl;
-    z = 30;     // this will modify the x variable of fun()
+    z = 30; // this will modify the x variable of fun()
     cout << fun();
 }
 

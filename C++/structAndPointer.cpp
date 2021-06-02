@@ -3,20 +3,21 @@
 
 using namespace std;
 
-struct Person {
+struct Person
+{
     string name;
     int age;
     double salary;
-};  //terminated by ;
+}; //terminated by ;
 
-
-int main() {
+int main()
+{
     cout << "Enter Person one details: " << endl;
     Person p1, *ptr;
     ptr = &p1;
 
     cout << "Name: ";
-    getline(cin, ptr->name);    // taking whole string including spaces. // func of <string>.
+    getline(cin, ptr->name); // taking whole string including spaces. // func of <string>.
     cout << "Age: ";
     cin >> ptr->age;
     cout << "Salary: ";
@@ -28,7 +29,6 @@ int main() {
     cout << "Name: " << ptr->name << endl;
     cout << "Age: " << ptr->age << endl;
     cout << "Salary: " << ptr->salary << endl;
-
 }
 
 // using Arrow Selection Operator to access structure attributes.

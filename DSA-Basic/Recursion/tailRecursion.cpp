@@ -2,46 +2,52 @@
 using namespace std;
 
 // 1 to N
-void oneToN(int n) {
-    if ( n <= 0)
+void oneToN(int n)
+{
+    if (n <= 0)
         return;
     oneToN(n - 1);
     cout << n << " ";
 }
 
 // N to 1: Tail Recursive Function
-void nToOne(int n) {
+void nToOne(int n)
+{
     if (n <= 0)
         return;
     cout << n << " ";
-    nToOne(n - 1);  // Tail Recursive Call
+    nToOne(n - 1); // Tail Recursive Call
 }
 
 // Normal factorial recursive function
-int fact(int n) {
+int fact(int n)
+{
     if (n == 0)
         return 1;
-    return n * fact(n - 1);     // NOT a Tail Recursive Call as the function (caller) waits for the value of 
+    return n * fact(n - 1); // NOT a Tail Recursive Call as the function (caller) waits for the value of
     // fact(n - 1) to multiply it with n and then return successfully.
 }
 
 // Tail Recursive version of the above factorial function
-int factTail(int n, int val = 1) {
+int factTail(int n, int val = 1)
+{
     if (n == 0)
         return val;
     return factTail(n - 1, val * n);
 }
 
-int main() {
+int main()
+{
     cout << "Enter n: ";
     int N;
     cin >> N;
 
     cout << "1 to " << N << ": ";
     oneToN(N);
-    cout << endl << N << " to 1" << ": ";
+    cout << endl
+         << N << " to 1"
+         << ": ";
     nToOne(N);
-
 
     cout << "\nFind factorial of: ";
     int a;

@@ -1,13 +1,15 @@
 #include <iostream>
-#include <cstdlib>  // includes rand(), srand()
-#include <ctime>    // includes time()
+#include <cstdlib> // includes rand(), srand()
+#include <ctime>   // includes time()
 
 using namespace std;
 
-int main() {
+int main()
+{
     srand(time(0));
 
-    for(int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++)
+    {
         cout << 1 + (rand() % 6) << endl;
     }
 }

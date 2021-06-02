@@ -1,33 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
     cout << "Enter two values: ";
     int x, y;
     cin >> x >> y;
 
-    try {
-        if(x == 0) {
+    try
+    {
+        if (x == 0)
+        {
             throw int(0);
         }
-        if(y == 0) {
+        if (y == 0)
+        {
             throw string("y is zero");
         }
-        if(x * y < 0) {
-            throw double(x * y);    // this will throw a double data type error so it will be catched by
+        if (x * y < 0)
+        {
+            throw double(x * y); // this will throw a double data type error so it will be caught by
             // default catch block as there is no catch block specific to catch double.
         }
 
-        cout << "x/y =" << x/y;
-    }catch(int err) {
+        cout << "x/y =" << x / y;
+    }
+    catch (int err)
+    {
         cout << "x is " << err;
-    }catch(string err) {
+    }
+    catch (string err)
+    {
         cout << err;
-    }catch(...) {       // by using ... we can create a default catch block.    
+    }
+    catch (...)
+    { // by using ... we can create a default catch block.
         cout << "Default catch block.";
     }
 
-    cout << endl << "Programe executed sucessfully !";
+    cout << endl
+         << "Programme executed successfully !";
 
     return 0;
 }

@@ -3,49 +3,57 @@
 
 using namespace std;
 
-class Test {
-    private:
-        string name;
-        int age;
-    public:
-        Test() {
-            name = "anonymous";
-            age = 0;
-        }
+class Test
+{
+private:
+    string name;
+    int age;
 
-        Test(string name, int age) {
-            this->name = name;       // good practice to keep the passed parameter name same and use 'this'.
-            this->age = age;
-        }
+public:
+    Test()
+    {
+        name = "anonymous";
+        age = 0;
+    }
 
-        void getName() {
-            cout << "name = " << name << endl;
-            cout << "this->name = " << this->name << endl;
-            cout << "(*this).name = " << (*this).name << endl;
-        }
+    Test(string name, int age)
+    {
+        this->name = name; // good practice to keep the passed parameter name same and use 'this'.
+        this->age = age;
+    }
 
-        void getAge() {
-            cout << "Age = " << age << endl;
-        }
+    void getName()
+    {
+        cout << "name = " << name << endl;
+        cout << "this->name = " << this->name << endl;
+        cout << "(*this).name = " << (*this).name << endl;
+    }
 
-        Test & setName(string name) {
-            this->name = name;
-            return *this;       // returning the obj to do channing.
-        }
+    void getAge()
+    {
+        cout << "Age = " << age << endl;
+    }
 
-        Test & setAge(int age) {
-            this->age = age;
-            return *this;       // returning the obj to do channing.
-        }
+    Test &setName(string name)
+    {
+        this->name = name;
+        return *this; // returning the obj to do chaning.
+    }
 
+    Test &setAge(int age)
+    {
+        this->age = age;
+        return *this; // returning the obj to do chaning.
+    }
 };
 
-int main() {
+int main()
+{
     Test t1("VeNoM", 19);
     t1.getName();
 
     Test t2;
-    t2.setName("Batook").setAge(21);     // 'this' can be used to do function channing.
+    t2.setName("Batook").setAge(21); // 'this' can be used to do function chaning.
     t2.getAge();
 }
 

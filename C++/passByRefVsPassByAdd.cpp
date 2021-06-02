@@ -2,32 +2,34 @@
 
 using namespace std;
 
-void callByReference(int &x, int &y) {
+void callByReference(int &x, int &y)
+{
     int temp = x;
     x = y;
     y = temp;
 }
 
-void callByAddress(int *x, int *y) {
+void callByAddress(int *x, int *y)
+{
     int temp = *x;
     *x = *y;
     *y = temp;
 }
 
-int main() {
+int main()
+{
     int a = 7, b = 11;
 
     cout << "Before Swapping: ";
     cout << "a = " << a << " b = " << b << endl;
 
     cout << "Calling by Reference: ";
-    callByReference(a, b);  //NOTICE: no need to pass the address
+    callByReference(a, b); //NOTICE: no need to pass the address
     cout << "a = " << a << " b = " << b << endl;
 
     cout << "Calling by Address: ";
-    callByAddress(&a, &b);  //NOTICE: address of the variables are being passed
+    callByAddress(&a, &b); //NOTICE: address of the variables are being passed
     cout << "a = " << a << " b = " << b << endl;
-
 }
 
 // in both ways the actual variables changes.
