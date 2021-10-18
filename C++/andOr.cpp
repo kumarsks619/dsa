@@ -7,6 +7,12 @@ int main()
     {
         cout << "Inside if" << endl;
     }
+    else
+    {
+        cout << "Inside else" << endl;
+    }
+
+    return 0;
 }
 
 // && evaluates first
