@@ -1,0 +1,93 @@
+1)  In Graph Data Structure, any Node can have any number of connections with any Node in the Graph.
+
+    v1-----v3                                   v1------>v3
+    |       |\                                  ^         ^\
+    |       | \                                 |         | \
+    |       |  v5                               |         |  v5
+    |       |  /                                |         |  /
+    |       | /                                 |         | /
+    v2------v4                                  v2<-------v4
+    Undirected Graph                            Directed Graph (all edges will have a direction)
+
+2)  Graph Representation ---> G = (V, E) ---> V = Vertices     &    E = Edges
+    V = {v1, v2, v3, v4, v5}        &       E = {(v1, v2), (v1, v3), (v2, v4), (v3, v4), (v3, v5), (v4, v5)}
+
+3)  Types of Graphs:
+    i) Directed Graph ---> Edges have direction ---> (v1, v2) != (v2, v1)
+    ii) Undirected Graph ---> Edges are directionless (both ways) ---> (v1, v2) = (v2, v1)
+
+4)  Undirected Graph:
+    i) Degree ---> No. of edges connected to a Vertex
+    ii) Sum of Degrees = 2 * |E|
+    iii) Maximum no. of possible edges = |V| * (|V| - 1) / 2
+    iv) Minimum no. of possible edges = 0 ---> No connection among vertices
+
+5)  Directed Graph:
+    i) Indegree ---> No. of edges coming in to a Vertex
+    ii) Outdegree ---> No. of edges going out form a Vertex
+    iii) Sum of Indegrees = Sum of Outdegrees = |E| = No. of Edges
+    iv) Maximum no. of possible edges = |V| * (|V| - 1) ---> COMPLETE GRAPH
+    v) Minimum no. of possible edges = 0 ---> No connection among vertices
+
+6)  i) Walk (Path): v1, v2, v4, v2 ------> v1, v5, v2 -- NOT a walk as no connections found between the vertices.
+    ii) Path (Simple Path): v1, v2, v4 -----> Special type of Walk with no-repetition of vertices(or edges).
+
+7)  Types of Graphs:
+    i) Cyclic Graph: A Graph in which there exist a Walk that begins and ends at the same vertex (no re-tracing of any edge).
+       Types of Cyclic Graph: i) Undirected Cyclic Graph ---> No direction of edges.
+                              ii) Directed Cyclic Graph ---> Edges direction should be followed while tracing the cyclic Walk.
+
+    ii) Acyclic Graph: A Graph in which there does NOT exists any Walk that begins and ends at the same vertex
+        without re-tracing any edge.
+        Types of Acyclic Graph: i) Undirected Acyclic Graph
+                                ii) Directed Acyclic Graph ---> DAG ---> has too many applications.
+
+8) Types of Graphs:
+   i) Weighted Graph ---> Edges have weights assigned to them. (eg: Road network ---> length roads = weights)
+   ii) Unweighted Graph ---> No weights.
+
+9) Types of Graph Representation in Programme:
+    i) Adjacency Matrix
+    ii) Adjacency List
+
+
+10) Adjacency Matrix Representation: a matrix is used with zeros and ones only.
+    0                           0   1   2   3
+    | \                     0  |0   1   1   0|
+    |  2---3           ==   1  |1   0   1   0|      ---> for Undirected Graph  
+    | /                     2  |1   1   0   1|      ---> Dimension of Matrix = |V|*|V|
+    1                       3  |0   0   1   0|
+
+    * Undirected Graph's Adjacency Matrix is Symmetric (upper triangle = lower triangle) whereas, Directed 
+      Graph's Adjacency Matrix may or may not be Symmetric.
+    * Space Required for Matrix = Theta(|V|*|V|)
+    * Time complexity of various operations on Adjacency Matrix:
+        + Check if A and B are adjacent (or has connection) = Theta(1)     ---> value at that particular co-ordinate
+        + Find all vertices adjacent to A(connections of A) = Theta(|V|)   ---> by traveling the whole row
+        + Find degree of A                                  = Theta(|V|)   ---> same as above
+        + Add/Remove an Edge                                = Theta(1)     ---> simply replacing the value at that co-ordinate
+        + Add/Remove a Vertex                               = Theta(|V|^2) ---> copying whole matrix to a new matrix
+
+11) Adjacency List Representation: an array of dynamic sized array or linked lists.
+    0                           0 |1|->|2|
+    | \                         1 |0|->|2|              ---> for Undirected Graph
+    |  2---3           ==       2 |0|->|1|->|3|         ---> Length of array = |V|      
+    | /                         3 |2|                   ---> Max space required = |V| * |V|  ---> in case of COMPLETE Graph
+    1     
+
+    * Adjacency List needs LESS SPACE as compared to Adjacency Matrix as it does not keep track of NO-LINKS (i.e. zeros).
+    * Total Space Required:-
+        i) for Undirected Graph: Theta(|V| + 2|E|)  ---> as each edge contributes to 2 spaces (both side linking)
+        ii) for Directed Graph: Theta(|V| + |E|)
+    * Time complexity of various operations on Adjacency List:
+        + Check if A and B are adjacent (or has connection) = O(|V|)             ---> by travelling the whole list at that index
+        + Find all vertices adjacent to A(connections of A) = Theta(degree(A))   ---> by travelling the whole list at that index
+        + Find degree of A                                  = Theta(|V|)         ---> length or size of the list at that index
+        + Add an Edge (create new link)                     = Theta(1)           ---> simply adding a new node to the list at that index
+        + Remove an Edge (break a link)                     = O(|V|)             ---> removing a Node from the list at that index
+        + Add/Remove a Vertex                               = Always going to be LESS than that of Adjacency Matrix
+
+    * Adjacency List is BETTER than Adjacency Matrix.
+
+12) Sparse Graph ---> No. of connections (edges) are VERY LESS than the maximum possible no. of connections (edges) ---> Adjacency List preferred
+    Dense Graph ---> No. of connections (edges) are ALMOST EQUAL to the maximum possible no. of connections (edges) ---> Adjacency Matrix preferred
