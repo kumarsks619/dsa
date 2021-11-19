@@ -12,7 +12,7 @@ int getSecondLargest(int arr[], int size)
             secondLargestIndex = largestIndex;
             largestIndex = i;
         }
-        else if (arr[i] != arr[largestIndex])
+        else if (arr[i] < arr[largestIndex])
         {
             if (secondLargestIndex == -1 || arr[i] > arr[secondLargestIndex])
                 secondLargestIndex = i;
@@ -24,7 +24,7 @@ int getSecondLargest(int arr[], int size)
 int main()
 {
     int size = 5;
-    int arr[size] = {11, 7, 10, 17, 19};
+    int arr[size] = {11, 7, 10, 5, 19};
     cout << "Array: ";
     for (int i = 0; i < size; i++)
     {
