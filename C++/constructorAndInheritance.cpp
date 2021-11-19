@@ -21,9 +21,9 @@ private:
 
 public:
     Derived(int y, int x) : Base(x)
-    { // if there is no default constructor in the Base class then this will
-        // give error so we need to call the parameterized constructor of Base class explicitly here
-        // that too in the INITIALIZER LIST (otherwise error).
+    { /* if there is no default constructor in the Base class then this will
+         give error so we need to call the parameterized constructor of Base class explicitly here
+         that too in the INITIALIZER LIST (otherwise error). */
         cout << "Derived: Paramerterized Constructor called..." << endl;
         this->y = y;
     }
@@ -63,6 +63,6 @@ int main()
 }
 
 // Base class contructor is always called first.
-// If there is explicit call of Base class constructor inside its Derived class constructor then the compiler
-// will automatically call the Default constructor of Base class and if it is not there in the Base class then
-// it will give compiler error.
+/* If there is NO explicit call of Base class constructor inside its Derived class constructor then the compiler
+ will automatically call the Default constructor of Base class and if it is not there in the Base class then
+ it will give compiler error. */

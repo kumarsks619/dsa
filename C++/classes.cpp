@@ -95,16 +95,16 @@ int main()
 // Types of Constructor:-
 // 1) Default Constructor
 // 2) Parameterized Constructor
-// 3) Copy Constructor - no need to manually create this contructor unless we want to do some
-//     modifications while copying values from other object to the current object.
-// Copy Constructor is provided with the class by default which does shallow copy (NOT deep copy). So, when
-// working with ptrs inside classes we should create our own copy constructor to do deep copy.
+/* 3) Copy Constructor - no need to manually create this contructor unless we want to do some
+     modifications while copying values from other object to the current object. */
+/* Copy Constructor is provided with the class by default which does shallow copy (NOT deep copy). So, when
+ working with ptrs inside classes we should create our own copy constructor to do deep copy. */
 
 // Class data members are private by default.
-// Constructors & Destructors DON'T have a return.
-// Whenver an object is created, its corresponding constructor is ALWAYS called ( same with the Destructor).
+// Constructors & Destructors DOESN'T have return statement.
+// Whenever an object is created, its corresponding constructor is ALWAYS called ( same with the Destructor).
 
 // NOTICE the order of Destructor calls: in the same scope, by default, the obj created FIRST is destructed LAST.
 // There must be ONLY one Destructor in a class.
-// Destructors are also provided by the complier but in case of dynamic memory allocations inside the class, we
-// must create our custom destructor to deallocate the memory.
+/* Destructors are also provided by the complier but in case of dynamic memory allocations inside the class, we
+ must create our custom destructor to deallocate the memory. */

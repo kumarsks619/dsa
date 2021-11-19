@@ -22,7 +22,9 @@ int main()
     int arr3[] = {2, 5, 6};
     int arr4[]{2, 8, 9};
     int arr5[5] = {0}; // trick to initialize all elements with 0.
-    int arr6[5] = {1}; // trick will not work in this case. Here only arr6[0] = 1 and other will have garbage values.
+    int arr6[5] = {1}; // trick will not work in this case. Here only arr6[0] = 1 and other will have zeros.
+
+    return 0;
 }
 
 // In case of LOCAL Variables:
