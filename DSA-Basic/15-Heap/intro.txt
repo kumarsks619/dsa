@@ -29,6 +29,6 @@ NOTE: Binary Tree is different from BST (it has some more rules). Here we are ta
         parent(i) = floor[(i - 1) / 2]
 
 6)  A Complete binary Tree has the minimum possible HEIGHT for the given number of Nodes.
-7)  In a Min-Heap, ALL THE DESCENDANTS of a Node's key must be strictly less than it's own key value, i.e why
+7)  In a Min-Heap, ALL THE DESCENDANTS of a Node's key must be equal to or greater than it's own key value, i.e why
     the minimum value always remains at the top in the tree.
      
